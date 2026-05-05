@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!-- Define que es un documento HTML5 -->
+<html lang="es">
+<!-- Etiqueta principal del documento, define el idioma en español -->
+
+<head>
+    <!-- Configuración e información del documento (no visible en la página) -->
+
+    <meta charset="UTF-8">
+    <!-- Permite el uso de caracteres especiales de nuestro idioma como la "ñ" y tildes -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea responsive, adaptándose a pantallas de celulares y computadoras -->
+
+    <!-- Google Analytics — reemplaza G-XXXXXXXXXX con tu Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <title>Allinkay - Fundación de Salud Mental y Bienestar | Quito, Ecuador</title>
+    <meta name="description" content="Fundación Allinkay ofrece atención psicológica, médica y psicopedagógica a comunidades vulnerables en Quito, Ecuador. Apóyanos con tu donación.">
+    <meta name="keywords" content="fundación, salud mental, psicología, medicina, Quito, Ecuador, donación, bienestar, Allinkay">
+    <meta name="author" content="Fundación Allinkay">
+    <meta property="og:title" content="Fundación Allinkay - Transformando vidas en Quito">
+    <meta property="og:description" content="Atención psicológica, médica y psicopedagógica para comunidades vulnerables. Únete a nuestra causa.">
+    <meta property="og:image" content="img/logo.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Título que aparece en la pestaña del navegador y es importante para el SEO -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Enlace al archivo CSS externo donde se definirán los estilos visuales -->
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Netlify Identity -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body>
+    <!-- Contenedor principal de todo el contenido visible de la página web -->
+
+    <header class="main-header">
+        <nav>
+            <!-- Menú de navegación principal con enlaces a otras partes de la página o sitio -->
+            <ul>
+                <li><a href="index.html" data-color="rgba(26, 188, 156, 0.5)">Inicio</a></li>
+                <li><a href="quienes-somos.html" data-color="rgba(52, 152, 219, 0.5)">Quienes somos</a></li>
+                <li><a href="servicios.html" data-color="rgba(46, 204, 113, 0.5)">Servicios</a></li>
+                <li><a href="programas.html" data-color="rgba(241, 196, 15, 0.5)">Programas</a></li>
+                <li><a href="donar.html" data-color="rgba(231, 76, 60, 0.7)">Donar ahora</a></li>
+                <li><a href="alianzas.html" data-color="rgba(241, 196, 15, 0.5)">Empresas aliadas</a></li>
+                <li><a href="apadrinar.html" data-color="rgba(230, 126, 34, 0.5)">Apadrinar</a></li>
+                <li><a href="index.html#contacto" data-color="rgba(149, 165, 166, 0.5)">Contactos</a></li>
+                <li class="lavalamp"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección principal (Hero) con la imagen de banner -->
+        <section class="hero">
+            <h1 class="sr-only">Tu bienestar es nuestra prioridad. Transformando vidas.</h1>
+            <img src="img/fondo.jpg"
+                alt="Tu bienestar es nuestra prioridad. Medicina General, Psicología, Psicopedagogía." class="hero-img">
+        </section>
+
+        <!-- Contenido principal y único de esta página. Solo debe haber un <main> por página -->
+
+        <!-- SECCIÓN TRANSPARENCIA -->
+        <section class="transparencia-section">
+            <div class="transparencia-header" data-aos="fade-up">
+                <span class="transparencia-badge"><i class="fa-solid fa-shield-halved"></i> Transparencia</span>
+                <h2>Nuestro impacto en números</h2>
+                <p>Creemos en la rendición de cuentas. Aquí compartimos abiertamente los resultados de nuestro trabajo.</p>
+            </div>
+
+            <div class="transparencia-stats">
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="stat-icon" style="background:#e6fffa; color:#0f766e;"><i class="fa-solid fa-users"></i></div>
+                    <span class="stat-number" data-stat="beneficiarios" data-target="0">0</span>
+                    <span class="stat-label">Beneficiarios atendidos</span>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-icon" style="background:#ebf8ff; color:#2b6cb0;"><i class="fa-solid fa-folder-open"></i></div>
+                    <span class="stat-number" data-stat="proyectos" data-target="0">0</span>
+                    <span class="stat-label">Proyectos realizados</span>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-icon" style="background:#faf5ff; color:#805ad5;"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <span class="stat-number" data-stat="satisfaccion" data-target="0">0</span>
+                    <span class="stat-label">% de satisfacción</span>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-icon" style="background:#fff7ed; color:#c05621;"><i class="fa-solid fa-calendar-check"></i></div>
+                    <span class="stat-number" data-stat="anios" data-target="0">0</span>
+                    <span class="stat-label">Años de trayectoria</span>
+                </div>
+            </div>
+
+            <div class="transparencia-informes" data-aos="fade-up" data-aos-delay="100">
+                <h3><i class="fa-solid fa-file-lines"></i> Informes de impacto</h3>
+                <div class="informes-grid">
+                    <a href="#" class="informe-card">
+                        <div class="informe-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="informe-info">
+                            <strong>Informe Anual 2025</strong>
+                            <span>Resultados, proyectos y uso de recursos</span>
+                        </div>
+                        <i class="fa-solid fa-download informe-dl"></i>
+                    </a>
+                    <a href="#" class="informe-card">
+                        <div class="informe-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="informe-info">
+                            <strong>Informe Anual 2024</strong>
+                            <span>Resultados, proyectos y uso de recursos</span>
+                        </div>
+                        <i class="fa-solid fa-download informe-dl"></i>
+                    </a>
+                    <a href="#" class="informe-card">
+                        <div class="informe-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <div class="informe-info">
+                            <strong>Reporte de beneficiarios 2025</strong>
+                            <span>Perfil y alcance de la población atendida</span>
+                        </div>
+                        <i class="fa-solid fa-download informe-dl"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN NOTICIAS Y CAMPAÑAS -->
+        <section class="noticias-section">
+            <div class="noticias-header" data-aos="fade-up">
+                <span class="noticias-badge"><i class="fa-solid fa-bullhorn"></i> Noticias y Campañas</span>
+                <h2>Lo que estamos haciendo</h2>
+                <p>Actividades, historias de impacto y próximos eventos de nuestra comunidad.</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="noticias-filtros" data-aos="fade-up" data-aos-delay="100">
+                <button class="filtro-btn active" data-filtro="todos">Todos</button>
+                <button class="filtro-btn" data-filtro="actividad">Actividades</button>
+                <button class="filtro-btn" data-filtro="historia">Historias de impacto</button>
+                <button class="filtro-btn" data-filtro="evento">Eventos</button>
+            </div>
+
+            <div class="noticias-grid">
+
+                <!-- Tarjeta 1 — Actividad -->
+                <article class="noticia-card" data-tipo="actividad" data-aos="fade-up" data-aos-delay="0">
+                    <div class="noticia-img-wrap">
+                        <img src="img/galeria4.jpg" alt="Jornada de salud comunitaria">
+                        <span class="noticia-tag tag-actividad">Actividad</span>
+                    </div>
+                    <div class="noticia-body">
+                        <span class="noticia-fecha"><i class="fa-regular fa-calendar"></i> 10 Abr 2026</span>
+                        <h3>Jornada de salud comunitaria en el barrio norte</h3>
+                        <p>Más de 200 personas recibieron atención médica y psicológica gratuita durante nuestra jornada mensual de salud.</p>
+                        <a href="#" class="noticia-leer">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 — Historia de impacto -->
+                <article class="noticia-card noticia-destacada" data-tipo="historia" data-aos="fade-up" data-aos-delay="100">
+                    <div class="noticia-img-wrap">
+                        <img src="img/galeria5.jpg" alt="Historia de impacto">
+                        <span class="noticia-tag tag-historia">Historia de impacto</span>
+                    </div>
+                    <div class="noticia-body">
+                        <span class="noticia-fecha"><i class="fa-regular fa-calendar"></i> 2 Abr 2026</span>
+                        <h3>"Recuperé mi vida gracias al acompañamiento de Allinkay"</h3>
+                        <p>María, de 34 años, comparte cómo el programa de acompañamiento en adicciones transformó su vida y la de su familia.</p>
+                        <a href="#" class="noticia-leer">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 — Evento -->
+                <article class="noticia-card" data-tipo="evento" data-aos="fade-up" data-aos-delay="200">
+                    <div class="noticia-img-wrap">
+                        <img src="img/galeria6.jpg" alt="Evento próximo">
+                        <span class="noticia-tag tag-evento">Evento</span>
+                    </div>
+                    <div class="noticia-body">
+                        <span class="noticia-fecha"><i class="fa-regular fa-calendar"></i> 5 May 2026</span>
+                        <h3>Feria de bienestar y salud mental 2026</h3>
+                        <p>Te invitamos a nuestra feria anual con talleres, charlas y actividades para toda la familia. ¡Entrada libre!</p>
+                        <a href="#" class="noticia-leer">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 4 — Actividad -->
+                <article class="noticia-card" data-tipo="actividad" data-aos="fade-up" data-aos-delay="0">
+                    <div class="noticia-img-wrap">
+                        <img src="img/galeria7.jpg" alt="Taller psicoeducativo">
+                        <span class="noticia-tag tag-actividad">Actividad</span>
+                    </div>
+                    <div class="noticia-body">
+                        <span class="noticia-fecha"><i class="fa-regular fa-calendar"></i> 18 Mar 2026</span>
+                        <h3>Taller de crianza positiva para padres y madres</h3>
+                        <p>Realizamos un taller con 60 familias sobre herramientas de comunicación y manejo emocional en el hogar.</p>
+                        <a href="#" class="noticia-leer">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 5 — Historia de impacto -->
+                <article class="noticia-card" data-tipo="historia" data-aos="fade-up" data-aos-delay="100">
+                    <div class="noticia-img-wrap">
+                        <img src="img/galeria8.jpg" alt="Historia de impacto niño">
+                        <span class="noticia-tag tag-historia">Historia de impacto</span>
+                    </div>
+                    <div class="noticia-body">
+                        <span class="noticia-fecha"><i class="fa-regular fa-calendar"></i> 25 Feb 2026</span>
+                        <h3>Lucas volvió a sonreír: psicopedagogía que cambia vidas</h3>
+                        <p>Con 8 años y dificultades de aprendizaje, Lucas encontró en nuestro equipo el apoyo que necesitaba para avanzar.</p>
+                        <a href="#" class="noticia-leer">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 6 — Evento -->
+                <article class="noticia-card" data-tipo="evento" data-aos="fade-up" data-aos-delay="200">
+                    <div class="noticia-img-wrap">
+                        <img src="img/galeria9.jpg" alt="Campaña de donación">
+                        <span class="noticia-tag tag-evento">Evento</span>
+                    </div>
+                    <div class="noticia-body">
+                        <span class="noticia-fecha"><i class="fa-regular fa-calendar"></i> 20 May 2026</span>
+                        <h3>Campaña "Un aporte, mil sonrisas" — Mayo 2026</h3>
+                        <p>Únete a nuestra campaña de recaudación anual. Cada donación financia atención directa a familias vulnerables.</p>
+                        <a href="#" class="noticia-leer">Leer más <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="galeria-section">
+            <h2 class="programas-title" data-aos="fade-up">Nuestra Galería</h2>
+            <p class="galeria-subtitle" data-aos="fade-up" data-aos-delay="100">Un vistazo al impacto y trabajo que realizamos día a día.</p>
+            <div class="galeria-grid">
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="0"><img src="img/galeria1.jpg" alt="Galería 1" class="galeria-img"></div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="50"><img src="img/galeria2.jpg" alt="Galería 2" class="galeria-img"></div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="100"><img src="img/galeria3.jpg" alt="Galería 3" class="galeria-img"></div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="150"><img src="img/galeria4.jpg" alt="Galería 4" class="galeria-img"></div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="200"><img src="img/galeria5.jpg" alt="Galería 5" class="galeria-img"></div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="250"><img src="img/galeria6.jpg" alt="Galería 6" class="galeria-img"></div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="300"><img src="img/galeria7.jpg" alt="Galería 7" class="galeria-img"></div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="350"><img src="img/galeria8.jpg" alt="Galería 8" class="galeria-img"></div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="400"><img src="img/galeria9.jpg" alt="Galería 9" class="galeria-img"></div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="450"><img src="img/galeria10.jpg" alt="Galería 10" class="galeria-img"></div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="500"><img src="img/galeria11.jpg" alt="Galería 11" class="galeria-img"></div>
+                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="550"><img src="img/galeria12.jpg" alt="Galería 12" class="galeria-img"></div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section class="contacto-section" id="contacto">
+            <div class="contacto-header" data-aos="fade-up">
+                <span class="contacto-badge"><i class="fa-solid fa-location-dot"></i> Contacto</span>
+                <h2>Estamos para ayudarte</h2>
+                <p>Escríbenos, llámanos o visítanos. Con gusto te atendemos.</p>
+            </div>
+
+            <div class="contacto-grid">
+
+                <!-- Columna izquierda: info + mapa -->
+                <div class="contacto-info" data-aos="fade-right">
+                    <div class="contacto-dato">
+                        <div class="contacto-icono"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <strong>Dirección</strong>
+                            <span>Lino Curima OE6-60 y Joaquín Tipantuña,<br>sector Barrionuevo, Quito – Pichincha</span>
+                        </div>
+                    </div>
+                    <div class="contacto-dato">
+                        <div class="contacto-icono"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <strong>Teléfono</strong>
+                            <a href="tel:0988282747">0988282747</a>
+                        </div>
+                    </div>
+                    <div class="contacto-dato">
+                        <div class="contacto-icono"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <strong>Correo electrónico</strong>
+                            <a href="mailto:fundacionallinkay_uio@outlook.com">fundacionallinkay_uio@outlook.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Redes sociales -->
+                    <div class="contacto-redes">
+                        <strong>Síguenos en redes</strong>
+                        <div class="redes-links">
+                            <a href="https://www.facebook.com/allin.kay.32251?locale=es_LA" target="_blank" rel="noopener" class="red-social red-fb">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/allinkay2" target="_blank" rel="noopener" class="red-social red-ig">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>@allinkay2</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="contacto-mapa">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Lino+Curima+OE6-60+y+Joaqu%C3%ADn+Tipantu%C3%B1a%2C+Barrionuevo%2C+Quito%2C+Pichincha%2C+Ecuador&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="Ubicación Fundación Allinkay">
+                        </iframe>
+                        <a class="mapa-link" href="https://www.google.com/maps/search/Lino+Curima+OE6-60+y+Joaqu%C3%ADn+Tipantu%C3%B1a,+Barrionuevo,+Quito,+Pichincha,+Ecuador" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-up-right-from-square"></i> Abrir en Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: formulario -->
+                <div class="contacto-form-wrap" data-aos="fade-left">
+                    <h3>Envíanos un mensaje</h3>
+                    <form class="contacto-form" onsubmit="handleContacto(event)">
+                        <div class="cf-row">
+                            <div class="cf-group">
+                                <label for="cf-nombre">Nombre</label>
+                                <input type="text" id="cf-nombre" class="cf-input" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="cf-group">
+                                <label for="cf-email">Correo electrónico</label>
+                                <input type="email" id="cf-email" class="cf-input" placeholder="tu@correo.com" required>
+                            </div>
+                        </div>
+                        <div class="cf-group">
+                            <label for="cf-asunto">Asunto</label>
+                            <input type="text" id="cf-asunto" class="cf-input" placeholder="¿En qué podemos ayudarte?">
+                        </div>
+                        <div class="cf-group">
+                            <label for="cf-mensaje">Mensaje</label>
+                            <textarea id="cf-mensaje" class="cf-input cf-textarea" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+                        <button type="submit" class="cf-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+                        </button>
+                        <p class="cf-success" id="cf-success">¡Mensaje enviado! Te responderemos pronto.</p>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- Pie de página, comúnmente contiene información de copyright, enlaces de contacto, legales, etc. -->
+        <p>&copy; 2026 Mi Proyecto Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal (Lightbox) para imágenes -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <button class="nav-lightbox prev-lightbox">&#10094;</button>
+        <img class="lightbox-content" id="lightbox-img">
+        <button class="nav-lightbox next-lightbox">&#10095;</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const lavalamp = document.querySelector('.lavalamp');
+            const navUl = document.querySelector('nav ul');
+
+            function moveLavalamp(el) {
+                const linkRect = el.getBoundingClientRect();
+                const ulRect = navUl.getBoundingClientRect();
+                lavalamp.style.width = `${linkRect.width}px`;
+                lavalamp.style.height = `${linkRect.height}px`;
+                lavalamp.style.left = `${linkRect.left - ulRect.left}px`;
+                lavalamp.style.top = `${linkRect.top - ulRect.top}px`;
+                lavalamp.style.opacity = '1';
+
+                if (el.dataset.color) {
+                    lavalamp.style.backgroundColor = el.dataset.color;
+                }
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', (e) => {
+                    moveLavalamp(e.target);
+                });
+            });
+
+            navUl.addEventListener('mouseleave', () => {
+                lavalamp.style.opacity = '0';
+            });
+
+            // ==========================================
+            // Lógica de la Galería (Lightbox)
+            // ==========================================
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.close-lightbox');
+            const prevBtn = document.querySelector('.prev-lightbox');
+            const nextBtn = document.querySelector('.next-lightbox');
+            const galleryImages = document.querySelectorAll('.galeria-img');
+            let currentImageIndex = 0;
+
+            function openLightbox(index) {
+                currentImageIndex = index;
+                lightboxImg.src = galleryImages[currentImageIndex].src;
+                lightbox.classList.add('show');
+                document.body.style.overflow = 'hidden'; // Prevenir scroll
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('show');
+                document.body.style.overflow = 'auto'; // Restaurar scroll
+            }
+
+            function showNext() {
+                currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                lightboxImg.src = galleryImages[currentImageIndex].src;
+            }
+
+            function showPrev() {
+                currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+                lightboxImg.src = galleryImages[currentImageIndex].src;
+            }
+
+            galleryImages.forEach((img, index) => {
+                img.addEventListener('click', () => openLightbox(index));
+                img.parentElement.addEventListener('click', () => openLightbox(index));
+            });
+
+            closeBtn.addEventListener('click', closeLightbox);
+            nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+            prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+
+            // Cerrar al hacer clic fuera de la imagen
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            // Navegación por teclado
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('show')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') showNext();
+                if (e.key === 'ArrowLeft') showPrev();
+            });
+
+            // ==========================================
+            // Contadores animados desde Google Sheets
+            // ==========================================
+            const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbw0BlsJdF3y3zOuBHV-XAlDEKvr6JYzXT_QKsLGT9QHHW3_a-rdPyDrXsc2abas5ASnzw/exec';
+
+            const statMap = {
+                'beneficiarios': document.querySelector('[data-stat="beneficiarios"]'),
+                'proyectos':     document.querySelector('[data-stat="proyectos"]'),
+                'satisfaccion':  document.querySelector('[data-stat="satisfaccion"]'),
+                'anios':         document.querySelector('[data-stat="anios"]')
+            };
+
+            function animateCounter(el, target) {
+                const duration = 1800;
+                const step = target / (duration / 16);
+                let current = 0;
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        el.textContent = target.toLocaleString('es');
+                        clearInterval(timer);
+                    } else {
+                        el.textContent = Math.floor(current).toLocaleString('es');
+                    }
+                }, 16);
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        observer.unobserve(entry.target);
+                        // Cargar datos desde Google Sheets
+                        fetch(SHEETS_URL)
+                            .then(r => r.json())
+                            .then(data => {
+                                Object.keys(statMap).forEach(key => {
+                                    const el = statMap[key];
+                                    if (el && data[key] !== undefined) {
+                                        el.dataset.target = data[key];
+                                        animateCounter(el, Number(data[key]));
+                                    }
+                                });
+                            })
+                            .catch(() => {
+                                // Si falla la conexión, anima con los valores del data-target actuales
+                                document.querySelectorAll('.stat-number').forEach(el => {
+                                    animateCounter(el, Number(el.dataset.target) || 0);
+                                });
+                            });
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            // Observar solo la primera tarjeta para disparar la carga una sola vez
+            const firstStat = document.querySelector('.stat-number');
+            if (firstStat) observer.observe(firstStat);
+
+            // ==========================================
+            // Filtros de Noticias y Campañas
+            // ==========================================
+            const filtros = document.querySelectorAll('.filtro-btn');
+            const tarjetas = document.querySelectorAll('.noticia-card');
+
+            filtros.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filtros.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const tipo = btn.dataset.filtro;
+                    tarjetas.forEach(card => {
+                        const mostrar = tipo === 'todos' || card.dataset.tipo === tipo;
+                        card.style.display = mostrar ? 'flex' : 'none';
+                    });
+                });
+            });
+        });
+
+        function handleContacto(e) {
+            e.preventDefault();
+            document.getElementById('cf-success').classList.add('visible');
+            e.target.reset();
+            setTimeout(() => document.getElementById('cf-success').classList.remove('visible'), 4000);
+        }
+    </script>
+    <!-- Botones flotantes -->
+    <div class="fab-container">
+        <a href="https://wa.me/593988282747?text=Hola%20Fundaci%C3%B3n%20Allinkay%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" 
+           target="_blank" rel="noopener" class="fab fab-whatsapp" aria-label="Contactar por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="fab-tooltip">WhatsApp</span>
+        </a>
+        <a href="donar.html" class="fab fab-donar" aria-label="Hacer una donación">
+            <i class="fa-solid fa-heart"></i>
+            <span class="fab-tooltip">¡Donar!</span>
+        </a>
+    </div>
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Netlify Identity redirect -->
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+
+</body>
+    <script>
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 80
+        });
+    </script>
+
+</body>
+
+</html>
+

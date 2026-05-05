@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos - Allinkay</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome para los íconos (Misión, Visión, Valores) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Encabezado con menú fijo igual que el index -->
+    <header class="main-header">
+        <nav>
+            <ul>
+                <li><a href="index.html" data-color="rgba(26, 188, 156, 0.5)">Inicio</a></li>
+                <li><a href="quienes-somos.html" data-color="rgba(52, 152, 219, 0.5)">Quienes somos</a></li>
+                <li><a href="servicios.html" data-color="rgba(46, 204, 113, 0.5)">Servicios</a></li>
+                <li><a href="programas.html" data-color="rgba(241, 196, 15, 0.5)">Programas</a></li>
+                <li><a href="donar.html" data-color="rgba(231, 76, 60, 0.7)">Donar ahora</a></li>
+                <li><a href="alianzas.html" data-color="rgba(241, 196, 15, 0.5)">Empresas aliadas</a></li>
+                <li><a href="apadrinar.html" data-color="rgba(230, 126, 34, 0.5)">Apadrinar</a></li>
+                <li><a href="index.html#contacto" data-color="rgba(149, 165, 166, 0.5)">Contactos</a></li>
+                <li class="lavalamp"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="quienes-somos-page">
+        <!-- Título e Introducción -->
+        <section class="qs-intro">
+            <h1>Quiénes Somos</h1>
+            <p>Somos una organización comprometida con brindar atención médica y psicológica a poblaciones en situación de vulnerabilidad, promoviendo el bienestar integral en todas las etapas de la vida.</p>
+        </section>
+
+        <!-- Tarjetas Misión y Visión -->
+        <section class="qs-cards-container">
+            <div class="qs-card card-mision">
+                <div class="card-header">
+                    <div class="icon-circle icon-blue">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h2>Misión</h2>
+                </div>
+                <p>Promover el acceso a la salud física, mental y de aprendizaje mediante servicios médicos, psicológicos integrales y psicopedagogía, alcanzando a comunidades vulnerables con atención de calidad.</p>
+            </div>
+
+            <div class="qs-card card-vision">
+                <div class="card-header">
+                    <div class="icon-circle icon-green">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h2>Visión</h2>
+                </div>
+                <p>Ser una organización referente en atención integral y prevención en salud comunitaria, reconocida por nuestro impacto positivo en la vida de miles de personas y familias.</p>
+            </div>
+        </section>
+
+        <!-- Tarjeta Nuestros Valores -->
+        <section class="qs-valores">
+            <div class="qs-card card-valores">
+                <div class="icon-heart">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <h2>Nuestros Valores</h2>
+                <p>Solidaridad, respeto, inclusión, transparencia y compromiso con el bienestar de cada persona que llega a nuestra fundación.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mi Proyecto Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script del menú Lavalamp -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const lavalamp = document.querySelector('.lavalamp');
+            const navUl = document.querySelector('nav ul');
+
+            function moveLavalamp(el) {
+                const linkRect = el.getBoundingClientRect();
+                const ulRect = navUl.getBoundingClientRect();
+                lavalamp.style.width = `${linkRect.width}px`;
+                lavalamp.style.height = `${linkRect.height}px`;
+                lavalamp.style.left = `${linkRect.left - ulRect.left}px`;
+                lavalamp.style.top = `${linkRect.top - ulRect.top}px`;
+                lavalamp.style.opacity = '1';
+
+                if (el.dataset.color) {
+                    lavalamp.style.backgroundColor = el.dataset.color;
+                }
+            }
+
+            // Seleccionar el elemento activo por defecto (Quienes somos)
+            const activeItem = navLinks[1]; // Índice 1 es 'Quienes somos'
+            setTimeout(() => {
+                moveLavalamp(activeItem);
+            }, 50);
+
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', (e) => {
+                    moveLavalamp(e.target);
+                });
+            });
+
+            navUl.addEventListener('mouseleave', () => {
+                moveLavalamp(activeItem); // Vuelve a 'Quienes somos'
+            });
+
+            window.addEventListener('resize', () => {
+                moveLavalamp(activeItem);
+            });
+        });
+    </script>
+
+    <!-- Botones flotantes -->
+    <div class="fab-container">
+        <a href="https://wa.me/593988282747?text=Hola%20Fundaci%C3%B3n%20Allinkay%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" 
+           target="_blank" rel="noopener" class="fab fab-whatsapp" aria-label="Contactar por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="fab-tooltip">WhatsApp</span>
+        </a>
+        <a href="donar.html" class="fab fab-donar" aria-label="Hacer una donación">
+            <i class="fa-solid fa-heart"></i>
+            <span class="fab-tooltip">¡Donar!</span>
+        </a>
+    </div>
+
+</body>
+
+</html>
+
