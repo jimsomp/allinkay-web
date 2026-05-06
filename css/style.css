@@ -827,7 +827,7 @@ nav ul li.lavalamp {
 /* Columna Izquierda (Informativa) */
 .alianzas-info {
     flex: 1.1;
-    background: linear-gradient(135deg, rgba(26, 32, 44, 0.95) 0%, rgba(45, 55, 72, 0.98) 100%), url('../img/galeria1.jpg') center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(26, 32, 44, 0.95) 0%, rgba(45, 55, 72, 0.98) 100%), url('../img/galeria/galeria1.jpg') center/cover no-repeat;
     color: white;
     padding: 50px 40px;
     display: flex;
