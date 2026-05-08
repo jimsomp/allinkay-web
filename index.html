@@ -104,30 +104,8 @@
             <div class="transparencia-informes" data-aos="fade-up" data-aos-delay="100">
                 <h3><i class="fa-solid fa-file-lines"></i> Informes de impacto</h3>
                 <div class="informes-grid">
-                    <a href="docs/informe-anual-2025.pdf" class="informe-card" target="_blank" rel="noopener">
-                        <div class="informe-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                        <div class="informe-info">
-                            <strong>Informe Anual 2025</strong>
-                            <span>Resultados, proyectos y uso de recursos</span>
-                        </div>
-                        <span class="informe-badge-pronto">Próximamente</span>
-                    </a>
-                    <a href="docs/informe-anual-2024.pdf" class="informe-card" target="_blank" rel="noopener">
-                        <div class="informe-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                        <div class="informe-info">
-                            <strong>Informe Anual 2024</strong>
-                            <span>Resultados, proyectos y uso de recursos</span>
-                        </div>
-                        <span class="informe-badge-pronto">Próximamente</span>
-                    </a>
-                    <a href="docs/reporte-beneficiarios-2025.pdf" class="informe-card" target="_blank" rel="noopener">
-                        <div class="informe-icon"><i class="fa-solid fa-chart-pie"></i></div>
-                        <div class="informe-info">
-                            <strong>Reporte de beneficiarios 2025</strong>
-                            <span>Perfil y alcance de la población atendida</span>
-                        </div>
-                        <span class="informe-badge-pronto">Próximamente</span>
-                    </a>
+                    <!-- Los informes se cargan dinámicamente desde Google Sheets -->
+                    <div style="color:#66788a; font-size:0.9rem; padding:10px;">Cargando informes...</div>
                 </div>
             </div>
         </section>
@@ -505,14 +483,51 @@
                 }, 16);
             }
 
+            function buildInformes(data) {
+                const grid = document.querySelector('.informes-grid');
+                if (!grid) return;
+
+                const informes = [
+                    { titulo: data['informe1_titulo'], url: data['informe1_url'] },
+                    { titulo: data['informe2_titulo'], url: data['informe2_url'] },
+                    { titulo: data['informe3_titulo'], url: data['informe3_url'] }
+                ];
+
+                grid.innerHTML = informes.map(inf => {
+                    if (!inf.titulo) return '';
+                    const disponible = inf.url && inf.url !== 'proximamente';
+                    const href = disponible ? convertDriveUrl(inf.url) : '#';
+                    const badge = disponible
+                        ? `<i class="fa-solid fa-download informe-dl"></i>`
+                        : `<span class="informe-badge-pronto">Próximamente</span>`;
+                    const target = disponible ? 'target="_blank" rel="noopener" download' : '';
+                    return `
+                        <a href="${href}" class="informe-card" ${target}>
+                            <div class="informe-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                            <div class="informe-info">
+                                <strong>${inf.titulo}</strong>
+                                <span>Resultados, proyectos y uso de recursos</span>
+                            </div>
+                            ${badge}
+                        </a>`;
+                }).join('');
+            }
+
+            function convertDriveUrl(url) {
+                // Convierte enlace de vista de Drive a enlace de descarga directa
+                const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+                if (match) return `https://drive.google.com/uc?export=download&id=${match[1]}`;
+                return url;
+            }
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         observer.unobserve(entry.target);
-                        // Cargar datos desde Google Sheets
                         fetch(SHEETS_URL)
                             .then(r => r.json())
                             .then(data => {
+                                // Contadores
                                 Object.keys(statMap).forEach(key => {
                                     const el = statMap[key];
                                     if (el && data[key] !== undefined) {
@@ -520,9 +535,10 @@
                                         animateCounter(el, Number(data[key]));
                                     }
                                 });
+                                // Informes
+                                buildInformes(data);
                             })
                             .catch(() => {
-                                // Si falla la conexión, anima con los valores del data-target actuales
                                 document.querySelectorAll('.stat-number').forEach(el => {
                                     animateCounter(el, Number(el.dataset.target) || 0);
                                 });
@@ -531,7 +547,6 @@
                 });
             }, { threshold: 0.5 });
 
-            // Observar solo la primera tarjeta para disparar la carga una sola vez
             const firstStat = document.querySelector('.stat-number');
             if (firstStat) observer.observe(firstStat);
 
