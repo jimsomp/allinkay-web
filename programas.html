@@ -15,7 +15,10 @@
 <body>
     <header class="main-header">
         <nav>
-            <ul>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="navMenu">
                 <li><a href="index.html" data-color="rgba(26, 188, 156, 0.5)">Inicio</a></li>
                 <li><a href="quienes-somos.html" data-color="rgba(52, 152, 219, 0.5)">Quienes somos</a></li>
                 <li><a href="servicios.html" data-color="rgba(46, 204, 113, 0.5)">Servicios</a></li>
@@ -87,6 +90,12 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navMenuEl = document.getElementById('navMenu');
+            if (hamburger && navMenuEl) {
+                hamburger.addEventListener('click', () => { navMenuEl.classList.toggle('open'); hamburger.classList.toggle('active'); });
+                navMenuEl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { navMenuEl.classList.remove('open'); hamburger.classList.remove('active'); }));
+            }
             const navLinks = document.querySelectorAll('nav ul li a');
             const lavalamp = document.querySelector('.lavalamp');
             const navUl = document.querySelector('nav ul');

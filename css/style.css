@@ -2865,3 +2865,189 @@ nav ul li.lavalamp {
     letter-spacing: 0.05em;
     flex-shrink: 0;
 }
+
+/* =========================================
+   MENÚ HAMBURGUESA (MOBILE)
+========================================= */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #ecf0f1;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* =========================================
+   RESPONSIVE MOBILE — 768px
+========================================= */
+@media (max-width: 768px) {
+
+    /* Header */
+    .main-header {
+        padding: 0.8rem 0;
+        position: relative;
+    }
+
+    nav {
+        position: relative;
+        min-height: 48px;
+    }
+
+    /* Hamburger visible */
+    .hamburger { display: flex; }
+
+    /* Menú oculto por defecto en mobile */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 12px 0;
+        z-index: 1050;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        border-radius: 0 0 12px 12px;
+    }
+
+    nav ul.open { display: flex; }
+
+    nav ul li { width: 100%; }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 12px 24px;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    nav ul li a:hover { background: rgba(255,255,255,0.08); }
+
+    /* Ocultar lavalamp en mobile */
+    nav ul li.lavalamp { display: none; }
+
+    /* Secciones — reducir márgenes */
+    .transparencia-section,
+    .noticias-section,
+    .galeria-section,
+    .contacto-section,
+    .programas-section {
+        margin: 40px auto;
+    }
+
+    /* Stats — 2 columnas en tablet */
+    .transparencia-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    /* Títulos */
+    .transparencia-header h2,
+    .noticias-header h2,
+    .contacto-header h2,
+    .programas-title {
+        font-size: 2rem;
+    }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE — 480px
+========================================= */
+@media (max-width: 480px) {
+
+    body { overflow-x: hidden; }
+
+    /* Stats — 1 columna */
+    .transparencia-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .stat-card { padding: 20px 16px; }
+    .stat-number { font-size: 2rem; }
+    .stat-label { font-size: 0.85rem; }
+
+    /* Títulos generales */
+    .transparencia-header h2,
+    .noticias-header h2,
+    .contacto-header h2,
+    .programas-title,
+    .apad-section-header h2 {
+        font-size: 1.7rem !important;
+    }
+
+    /* Noticias */
+    .noticia-img-wrap { height: 160px; }
+    .noticia-body { padding: 16px; gap: 8px; }
+    .filtro-btn { padding: 7px 14px; font-size: 0.8rem; }
+    .noticias-filtros { gap: 6px; }
+
+    /* Galería */
+    .galeria-grid { gap: 10px; }
+    .galeria-item::after { font-size: 1.4rem; }
+
+    /* Contacto */
+    .contacto-form-wrap { padding: 20px 16px; }
+    .contacto-icono { width: 36px; height: 36px; font-size: 0.95rem; }
+    .contacto-mapa iframe { height: 180px; }
+    .cf-input { padding: 10px 12px; font-size: 0.9rem; }
+    .cf-textarea { min-height: 100px; }
+    .cf-row { grid-template-columns: 1fr; }
+
+    /* FAB */
+    .fab { width: 48px; height: 48px; font-size: 1.1rem; }
+    .fab-container { bottom: 16px; right: 12px; gap: 8px; }
+    .fab-tooltip { display: none; }
+
+    /* Informes */
+    .informe-card { padding: 14px 16px; gap: 12px; }
+    .informe-icon { width: 36px; height: 36px; font-size: 1rem; }
+
+    /* Modales */
+    .noticia-modal,
+    .servicio-modal { max-width: 95vw; }
+    .noticia-modal img { height: 180px; }
+    .noticia-modal-body { padding: 20px; }
+
+    /* Apadrinar */
+    .apad-hero h1 { font-size: 1.8rem; }
+    .apad-hero p { font-size: 0.95rem; }
+    .apad-filtros { grid-template-columns: 1fr; }
+    .apad-resultados { grid-template-columns: 1fr; }
+    .apad-opciones-grid { grid-template-columns: 1fr; }
+
+    /* Donar */
+    .payment-method-group { grid-template-columns: repeat(2, 1fr); }
+    .donar-container { flex-direction: column; }
+    .donar-info { padding: 30px 20px; }
+    .donar-form-container { padding: 24px 16px; }
+}
